@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+
+  & main {
+    display: grid;
+    gap: 10px;
+    & .square {
+      width: 250px;
+      height: 250px;
+      font-size: 3rem;
+      display: grid;
+      place-content: center;
+    }
+
+    & .square:nth-child(1) {
+      background-color: salmon;
+      /* transform: rotate(45deg); */
+      animation: rotate;
+      animation-duration: 0.5s;
+      animation-iteration-count: infinite;
+    }
+    & .square:nth-child(2) {
+      background-color: tomato;
+      /* transform: rotate(45deg); */
+      animation: rotate;
+      animation-duration: 0.5s;
+      animation-iteration-count: infinite;
+    }
+    & .square:nth-child(3) {
+      background-color: orangered;
+      /* transform: rotate(45deg); */
+      animation: rotate;
+      animation-duration: 0.5s;
+      animation-iteration-count: infinite;
+    }
+
+    & .square:hover {
+      background-color: royalblue;
+      transform: scale(1.2);
+      border-radius: 50%;
+    }
+
+    & .square {
+      transition-property: all;
+      transition-duration: 2s;
+      /* transition-delay: 1s; */
+    }
+  }
+}
+
+@keyframes abc {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

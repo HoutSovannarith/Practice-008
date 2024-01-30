@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "fantasy magist";
+  src: url(../fonts/FANTASY_MAGIST.otf);
+}
+
+h1 {
+  color: darkblue;
+}
+
+h1:hover::after {
+  content: "after";
+  color: orangered;
+}
+
+h1:hover::before {
+  content: "before";
+  color: orangered;
+}
+
+/* Attribute Container */
+.attribute-container {
+  & a {
+    color: blue;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  & a[href] {
+    color: red;
+  }
+
+  & a[href^="https"] {
+    color: blue;
+  }
+
+  & a[href^="https"]:hover::after {
+    content: "(Secure)";
+    color: green;
+  }
+
+  & a[href$=".kh"]::after {
+    content: "Khmer Website";
+    color: chocolate;
+  }
+}
+
+.text-container {
+  background-color: antiquewhite;
+  padding: 7px;
+  margin-top: 25px;
+
+  & h1 {
+    font-family: "fantasy magist";
+    color: deepskyblue;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    word-spacing: 5px;
+    letter-spacing: 5px;
+  }
+
+  & p {
+    line-height: 30px;
+    text-align: justify;
+  }
+}
+
+.table-section {
+  margin-top: 25px;
+
+  & table {
+    border-collapse: collapse;
+    margin: auto;
+
+    & th {
+      background-color: rgb(6, 95, 131);
+      color: whitesmoke;
+    }
+
+    & tbody > tr:nth-child(odd) {
+      background-color: papayawhip;
+    }
+    & tbody > tr:nth-child(even) {
+      background-color: dimgray;
+    }
+    & tr:hover {
+      background-color: rgb(58, 58, 58);
+      color: white;
+      scale: 110%;
+    }
+  }
+
+  & th,
+  td {
+    padding: 10px;
+  }
+}
